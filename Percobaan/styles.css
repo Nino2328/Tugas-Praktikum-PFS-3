@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.dashboard {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar nav ul li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #666;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.sidebar nav ul li.active a {
+    background-color: #f0e6ff;
+    color: #7c3aed;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #f0f0f0;
+}
+
+.icon {
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    position: relative;
+    margin-right: 20px;
+}
+
+.search-bar input {
+    padding: 10px 15px;
+    padding-left: 35px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    width: 250px;
+}
+
+.search-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.notification-icon {
+    margin-right: 20px;
+    font-size: 20px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.add-new {
+    background-color: #f0e6ff;
+    color: #7c3aed;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    width: 300px;
+    height: 180px;
+    border-radius: 15px;
+    padding: 20px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.visa {
+    background-color: #1a1a1a;
+}
+
+.mastercard {
+    background-color: #333333;
+}
+
+.card-type, .card-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.card-number {
+    font-size: 18px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.card-holder {
+    font-size: 14px;
+}
+
+.card-chip {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255,255,255,0.2);
+    padding: 5px 10px;
+    border-radius: 5px;
+    transform: rotate(90deg);
+}
+
+.circle {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.red { background-color: #eb001b; }
+.yellow { background-color: #f79e1b; margin-left: -15px; }
+
+.dashboard-bottom {
+    display: flex;
+    gap: 30px;
+}
+
+.transactions, .chart-and-history {
+    flex: 1;
+    background-color: white;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.transaction-list, .history-list {
+    list-style-type: none;
+}
+
+.transaction-list li, .history-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-icon, .history-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+
+.transaction-details, .history-details {
+    flex: 1;
+}
+
+.transaction-name, .history-name {
+    font-weight: bold;
+}
+
+.transaction-date, .history-date {
+    font-size: 12px;
+    color: #888;
+}
+
+.transaction-amount, .history-amount {
+    font-weight: bold;
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    margin-bottom: 30px;
+}
+
+.chart-total {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.see-all {
+    color: #7c3aed;
+    text-decoration: none;
+}
+
+select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 1200px) {
+    .dashboard {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 20px;
+    }
+    
+    .sidebar nav ul {
+        display: flex;
+    }
+    
+    .sidebar nav ul li {
+        margin-right: 15px;
+        margin-bottom: 0;
+    }
+    
+    .sidebar-footer {
+        display: none;
+    }
+    
+    .main-content {
+        height: calc(100vh - 60px);
+    }
+    
+    .card-container, .dashboard-bottom {
+        flex-direction: column;
+    }
+    
+    .card {
+        width: 100%;
+    }
+}

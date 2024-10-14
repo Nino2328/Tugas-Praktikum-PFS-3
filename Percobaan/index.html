@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FiiNeo.io Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <h1 class="logo">FiiNeo.io</h1>
+            <nav>
+                <ul>
+                    <li class="active"><a href="#"><span class="icon">⊞</span>Dashboard</a></li>
+                    <li><a href="#"><span class="icon">📊</span>Statistics</a></li>
+                    <li><a href="#"><span class="icon">👛</span>My Wallet</a></li>
+                    <li><a href="#"><span class="icon">🔄</span>Transfers</a></li>
+                    <li><a href="#"><span class="icon">💬</span>Message</a></li>
+                    <li><a href="#"><span class="icon">❤️</span>Favorite</a></li>
+                    <li><a href="#"><span class="icon">👤</span>Profile</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <ul>
+                    <li><a href="#"><span class="icon">❓</span>Support</a></li>
+                    <li><a href="#"><span class="icon">⚙️</span>Settings</a></li>
+                    <li><a href="#"><span class="icon">🚪</span>Log out</a></li>
+                </ul>
+            </div>
+        </aside>
+        <main class="main-content">
+            <header>
+                <h2>Hello, Nino 👋</h2>
+                <div class="header-right">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <span class="notification-icon">🔔</span>
+                    <img src="Nino1.jpg" alt="Profile Picture" class="profile-pic">
+                </div>
+            </header>
+            <section class="my-cards">
+                <div class="section-header">
+                    <h3>My Cards</h3>
+                    <button class="add-new">Add New</button>
+                </div>
+                <div class="card-container">
+                    <div class="card visa">
+                        <div class="card-type">VISA</div>
+                        <div class="card-number">1230 4670 4670</div>
+                        <div class="card-holder">Rakib Kowshar</div>
+                        <div class="card-chip">)))</div>
+                    </div>
+                    <div class="card mastercard">
+                        <div class="card-logo">
+                            <span class="circle red"></span>
+                            <span class="circle yellow"></span>
+                        </div>
+                        <div class="card-number">4670 4670 1230</div>
+                        <div class="card-holder">Rakib Kowshar</div>
+                        <div class="card-chip">)))</div>
+                    </div>
+                </div>
+            </section>
+            <div class="dashboard-bottom">
+                <section class="transactions">
+                    <div class="section-header">
+                        <h3>Transactions</h3>
+                        <select>
+                            <option>Month</option>
+                        </select>
+                    </div>
+                    <ul class="transaction-list">
+                        <li>
+                            <div class="transaction-icon">🎥</div>
+                            <div class="transaction-details">
+                                <span class="transaction-name">Weeding video</span>
+                                <span class="transaction-date">Apr 06, 2021</span>
+                            </div>
+                            <span class="transaction-amount">$3,000</span>
+                        </li>
+                        <li>
+                            <div class="transaction-icon">📄</div>
+                            <div class="transaction-details">
+                                <span class="transaction-name">Passport verification</span>
+                                <span class="transaction-date">Apr 02, 2021</span>
+                            </div>
+                            <span class="transaction-amount">$100</span>
+                        </li>
+                        <li>
+                            <div class="transaction-icon">📷</div>
+                            <div class="transaction-details">
+                                <span class="transaction-name">RK's Photography</span>
+                                <span class="transaction-date">Mar 28, 2021</span>
+                            </div>
+                            <span class="transaction-amount">$470</span>
+                        </li>
+                        <li>
+                            <div class="transaction-icon">📄</div>
+                            <div class="transaction-details">
+                                <span class="transaction-name">Passport verification</span>
+                                <span class="transaction-date">Apr 02, 2021</span>
+                            </div>
+                            <span class="transaction-amount">$100</span>
+                        </li>
+                        <li>
+                            <div class="transaction-icon">🛒</div>
+                            <div class="transaction-details">
+                                <span class="transaction-name">Grocery Shop</span>
+                                <span class="transaction-date">Mar 24, 2021</span>
+                            </div>
+                            <span class="transaction-amount">$185</span>
+                        </li>
+                        <li>
+                            <div class="transaction-icon">✈️</div>
+                            <div class="transaction-details">
+                                <span class="transaction-name">Flight Ticket</span>
+                                <span class="transaction-date">Mar 21, 2021</span>
+                            </div>
+                            <span class="transaction-amount">$860</span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="chart-and-history">
+                    <div class="chart-container">
+                        <canvas id="financeChart"></canvas>
+                        <div class="chart-total">$6,482</div>
+                    </div>
+                    <div class="history">
+                        <div class="section-header">
+                            <h3>History</h3>
+                            <a href="#" class="see-all">See all</a>
+                        </div>
+                        <ul class="history-list">
+                            <li>
+                                <div class="history-icon">in</div>
+                                <div class="history-details">
+                                    <span class="history-name">LinkedIn Pro</span>
+                                    <span class="history-date">10 Mar 2021</span>
+                                </div>
+                                <span class="history-amount">-260.80</span>
+                            </li>
+                            <li>
+                                <div class="history-icon">fig</div>
+                                <div class="history-details">
+                                    <span class="history-name">Figma plan</span>
+                                    <span class="history-date">09 Mar 2021</span>
+                                </div>
+                                <span class="history-amount">-126.50</span>
+                            </li>
+                            <li>
+                                <div class="history-icon">ig</div>
+                                <div class="history-details">
+                                    <span class="history-name">Instagram ads</span>
+                                    <span class="history-date">08 Mar 2021</span>
+                                </div>
+                                <span class="history-amount">-108.40</span>
+                            </li>
+                            <li>
+                                <div class="history-icon">dr</div>
+                                <div class="history-details">
+                                    <span class="history-name">Dribbble Pro</span>
+                                    <span class="history-date">08 Mar 2021</span>
+                                </div>
+                                <span class="history-amount">-108.40</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

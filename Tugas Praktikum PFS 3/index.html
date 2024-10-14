@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acedesign Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="dashboard">
+        <aside class="sidebar">
+            <div class="logo">
+                <div class="logo-icon">A</div>
+                <span class="logo-text">Acedesign</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i data-lucide="layout-dashboard"></i> Overview</a></li>
+                    <li><a href="#"><i data-lucide="shopping-cart"></i> Orders</a></li>
+                    <li><a href="#"><i data-lucide="package"></i> Products</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle"><i data-lucide="settings"></i> Settings</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#"><i data-lucide="user"></i> Profile</a></li>
+                            <li><a href="#"><i data-lucide="lock"></i> Security</a></li>
+                            <li><a href="#"><i data-lucide="bell"></i> Notifications</a></li>
+                            <li><a href="#"><i data-lucide="credit-card"></i> Billing</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <input type="text" placeholder="Search for product" class="search-input">
+                <div class="user-actions">
+                    <i data-lucide="bell"></i>
+                    <i data-lucide="edit"></i>
+                    <div class="user-avatar">
+                        <img src="Nino.jpg" alt="User" width="32" height="32">
+                    </div>
+                </div>
+            </header>
+
+            <h1>Overview</h1>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Total penjualan</span>
+                        <span class="stat-change positive">+68%</span>
+                    </div>
+                    <div class="stat-value">27,340.000</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Total pengeluaran</span>
+                        <span class="stat-change negative">-47%</span>
+                    </div>
+                    <div class="stat-value">7,340.00</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Total pengunjung</span>
+                        <span class="stat-change positive">+32%</span>
+                    </div>
+                    <div class="stat-value">18,340.00</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span>Total pesanan</span>
+                        <span class="stat-change negative">-66%</span>
+                    </div>
+                    <div class="stat-value">11,340.00</div>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2>Penjualan vs pengeluaran</h2>
+                    </div>
+                    <div class="chart">
+                        <canvas id="incomeExpenseChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2>pengunjung vs pesanan</h2>
+                    </div>
+                    <div class="chart">
+                        <canvas id="visitorsOrdersChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <h2>produk populer</h2>
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>tanggal</th>
+                            <th>kategori</th>
+                            <th>merek</th>
+                            <th>harga</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>iPhone 15</td>
+                            <td>Apr 12, 2024</td>
+                            <td>Technic</td>
+                            <td>Apple</td>
+                            <td>19,000.000 Rp</td>
+                            <td><span class="status Tersedia">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>Macbook Air</td>
+                            <td>Apr 10, 2024</td>
+                            <td>Technic</td>
+                            <td>Apple</td>
+                            <td>22,000.000 Rp</td>
+                            <td><span class="status Tersedia">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>Samsung S23+</td>
+                            <td>Apr 18, 2024 </td>
+                            <td>Technic</td>
+                            <td>Andorid</td>
+                            <td>20,000.000 Rp</td>
+                            <td><span class="status Tersedia">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>Redmi Not 12</td>
+                            <td>Mei 3, 2024 </td>
+                            <td>Technic</td>
+                            <td>Andorid</td>
+                            <td>3,000.000 Rp</td>
+                            <td><span class="status Tersedia">Tersedia</span></td>
+                        </tr>
+                        <tr>
+                            <td>Asus ROG Phone 8</td>
+                            <td>Mei 11, 2024 </td>
+                            <td>Technic</td>
+                            <td>Andorid</td>
+                            <td>10,944.005 Rp</td>
+                            <td><span class="status Tersedia">Tersedia</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="footer-stats">
+                <div class="stat-item">
+                    <i data-lucide="package"></i>
+                    <div>
+                        <div class="stat-value">2057</div>
+                        <div class="stat-label">Produk</div>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <i data-lucide="users"></i>
+                    <div>
+                        <div class="stat-value">60,580 JT</div>
+                        <div class="stat-label">Follower</div>
+                    </div>
+                </div>
+                <div class="reputasi">
+                    <div class="reputasi-label">Reputasi</div>
+                    <div class="reputasi-bar">
+                        <div class="reputasi-progress"></div>
+                    </div>
+                    <div class="reputasi-stats">
+                        <span>Mulai penjualan</span>
+                        <span>78%</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,391 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100%;
+  background: #f8fbfd;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  margin-right: 14px;
+}
+
+nav .logo {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  color: #333;
+}
+
+.logo-name {
+  display: none;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.sidebar:hover .logo-name {
+  display: block;
+}
+
+
+.sidebar {
+  position: fixed;
+  left: -220px;
+  transition: left 0.3s ease;
+  width: 220px;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .sidebar-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px 16px;
+}
+
+.sidebar-content .list {
+  list-style: none;
+}
+
+.sidebar:hover {
+  left: 0;
+}
+
+.sidebar:hover .logo .logo-name {
+  display: block;
+}
+
+.sidebar:hover .nav-link .link {
+  display: block;
+}
+
+.sidebar .nav-link .link {
+  display: none;
+}
+
+.sidebar .nav-link .icon {
+  font-size: 24px;
+  display: inline-block;
+  color: #707070;
+  margin-right: 0;
+}
+
+.list .nav-link {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+  padding: 14px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.lists .nav-link:hover {
+  background-color: #4070f4;
+}
+
+.nav-link .icon {
+  margin-right: 14px;
+  font-size: 20px;
+  color: #707070;
+}
+
+.nav-link .link {
+  font-size: 16px;
+  color: #707070;
+  font-weight: 400;
+}
+
+.lists .nav-link:hover .icon,
+.lists .nav-link:hover .link {
+  color: #fff;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 160px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 8px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 14px 12px;
+  text-decoration: none;
+  display: block;
+  border-radius: 8px;
+}
+
+.dropdown-content a:hover {
+  background-color: #4070f4;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.bottom-content {
+  margin-top: auto;
+}
+
+.bottom-content .lists {
+  list-style: none;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 5px;
+  left: 280px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 15px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #f1f1f1;
+  border-radius: 10px;
+  padding: 5px;
+  width: 1500px;
+}
+
+.search-input {
+  border: none;
+  background: transparent;
+  outline: none;
+  padding: 8px;
+  border-radius: 10px;
+  flex-grow: 1;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+}
+
+.header-icons .icon {
+  font-size: 24px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: #707070;
+}
+
+.profile-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-left: 20px;
+}
+
+.profile-icon img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  margin-left: 260px;
+  padding: 20px;
+  margin-top: 80px;
+}
+
+.main-content {
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar:hover ~ .main-content {
+  margin-left: 220px;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.card {
+  width: calc(50% - 10px);
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+}
+
+.card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.blue { background-color: #4A90E2; }
+.light-blue { background-color: #A4D8E1; }
+.purple { background-color: #9B59B6; }
+.green { background-color: #1ABC9C; }
+
+.amount {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.saved {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.charts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.chart {
+  flex: 1;
+  margin-right: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #48eef1;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: opacity 2s ease;
+}
+
+.chart:hover {
+  opacity: 0.7;
+}
+
+.chart-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.chart-placeholder {
+  width: 100%;
+  height: 400px;
+  background-color: rgba(240, 240, 240, 0.9);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.budget-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.budget {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.progress-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 10px solid #e0e0e0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto 10px;
+}
+
+.progress-circle span {
+  position: absolute;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.pie-chart {
+  width: 300px;
+  height: 300px;
+  background-color: #e0e0e0;
+  border-radius: 0;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pie-chart .label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+
+@media (max-width: 768px) {
+  .pie-chart {
+    width: 200px;
+    height: 200px;
+  }
+}
